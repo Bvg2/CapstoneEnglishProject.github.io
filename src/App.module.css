@@ -1,0 +1,346 @@
+@import url("https://js.arcgis.com/4.32/@arcgis/core/assets/esri/themes/dark/main.css");
+@import url("https://js.arcgis.com/calcite-components/3.0.3/calcite.css");
+@import url("https://js.arcgis.com/map-components/4.32/arcgis-map-components.css");
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.title {
+  margin: 15px;
+}
+
+.holderMap {
+  border-radius: 25px;
+  width: 100%;
+  height: 100%;
+}
+
+.holderMap:hover {
+  width: 100%;
+  height: 100%;
+}
+
+.map {
+  background-color: blueviolet;
+  height: 500px;
+  padding: 10px;
+  width: 50%;
+  transition: 0.3s;
+  z-index: 10;
+  position: absolute;
+  border-radius: 15px;
+}
+
+.map:hover {
+  height: 550px;
+  width: 75%;
+
+}
+
+.map arcgis-map {
+  border-radius: 25px;
+  width: 100%;
+  height: 100%;
+
+}
+
+.map:hover arcgis-map {
+  width: 100%;
+  height: 100%;
+}
+
+.formDiv {
+  display: inline-block;
+
+}
+
+
+.mapData {
+  display: inline-flex;
+  flex-direction: column;
+  margin-left: 75px;
+  justify-content: center;
+}
+
+.mapData h3 {
+  margin: 10px;
+  width: 100%;
+}
+
+.dataList {
+  display: inline-flex;
+  flex-direction: column;
+  height: 50%;
+  width: 100%;
+  margin: 15px;
+}
+
+.mapData p {
+
+  margin: 0;
+}
+
+.groupInput {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  border: solid 5px orange;
+  border-radius: 25px;
+  left: 55%;
+  width: 40%;
+  height: 55%;
+}
+
+form {
+  margin: 10px;
+}
+
+.inputForm {
+  font-size: 18px;
+  border: none;
+  padding: 10px;
+  border-bottom: 2px solid red;
+  width: 130px;
+  box-sizing: border-box;
+  transition: width 0.4s ease-in-out;
+  display: block;
+}
+
+.inputForm:focus {
+  border: 3px solid #555;
+  border-radius: 4px;
+  width: 230px;
+}
+
+input[type=date] {
+  border: 2px solid red;
+  width: 30%;
+  height: 30px;
+  font-size: 18px;
+  margin-left: 5px;
+  border-radius: 10px;
+  display: block;
+  margin-top: 20px;
+  color: gray;
+}
+
+.timeInput {
+  font-size: 18px;
+  border: none;
+  padding: 10px;
+  border-bottom: 2px solid red;
+  width: 150px;
+  color: gray;
+  box-sizing: border-box;
+  transition: width 0.4s ease-in-out;
+  display: block;
+  margin-top: 20px;
+
+}
+
+.timeInput:focus {
+  border: 3px solid #555;
+  border-radius: 4px;
+  width: 20%;
+}
+
+
+.groupInput h1 {
+  margin: 10px;
+}
+
+.submitButton {
+  margin-left: 75%;
+  margin-top: 30px;
+  font-size: 20px;
+  background-color: orange;
+  border-radius: 8px;
+}
+
+.waiverButton {
+  margin-left: 55%;
+  font-size: 20px;
+  width: 100px;
+  background-color: orange;
+  border-radius: 8px;
+}
+
+.waiverButton:hover {
+  background-color: rgba(210, 137, 0, 0.892);
+}
+
+.submitButton:hover {
+  background-color: rgba(210, 137, 0, 0.892);
+}
+
+.submitButton:disabled {
+  background-color: rgba(162, 162, 162, 0.723);
+}
+
+.headless {
+  background-color: #61dafb;
+  z-index: -20;
+}
+
+.listDiv {
+  height: 150px;
+  overflow-y: scroll;
+  border: "3px black";
+  background-color: "red"
+    /* background-image:url(images/bubble.png); */
+    /* background-color: black; */
+}
+
+.liability {
+  position: fixed;
+  top: 20%;
+  left: 20%;
+  width: 75%;
+  height: 75%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  z-index: 30;
+  background-color: whitesmoke;
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 15px;
+}
+
+.liability h3 {
+  margin: 30px;
+  width: 75%;
+}
+
+.liability p {
+  font-size: 20px;
+  height: 50%;
+}
+
+.liabilityTalkDiv {
+  margin: 30px;
+  width: 90%;
+  height: 350px;
+  overflow-y: scroll;
+
+}
+
+.imageDiv {
+  position: fixed;
+  left: 90%;
+  top: 75%;
+  align-items: center;
+  text-align: center;
+}
+
+.image img {
+
+  border-radius: 35px;
+  height: 70px;
+  width: 70px;
+}
+
+.info{
+  display: inline-block;
+  position: absolute;
+  top:68%;
+  left:57%;
+  width: 30%;
+  border: solid 2px black;
+  border-radius: 25px;
+  padding-left:10px;
+  padding-right:10px;
+  
+}
+.info h{
+  display: block;
+}
+
+.legend {
+  position: fixed;
+  left: 5%;
+  top: 85%;
+  display: inline-block;
+
+}
+.legend h2{
+  display: inline-block;
+  margin-right: 10px;
+  position: absolute;
+  left: -30%;
+  top: 5%;
+  
+}
+
+.key {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+
+.bad {
+  background-color: purple;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border: solid 2px black;
+  
+}
+
+.average {
+  background-color: yellow;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border: solid 2px black;
+
+}
+
+.good {
+  background-color: teal;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border: solid 2px black;
+}
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
